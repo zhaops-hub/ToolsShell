@@ -39,6 +39,15 @@ services:
   gitignore-io:
     image: gofunky/gitignore.io
     container_name: gitignore-io
-    ports:
-      - 9001:8080
+    network_mode: host
     command: vapor run
+  
+  nginx:
+    image: nginx
+    container_name: nginx
+    #ports: 
+    # - 8080:8080
+    network_mode: host
+    volumes: 
+      - /home/nginx/conf:/etc/nginx/conf.d
+      - /home/nginx/logs:/var/log/nginx

@@ -19,4 +19,7 @@ gitlab_rails['gitlab_ssh_user'] = '222'
 
 - gitignore.io
 > 快速生成 gitignore文件
-    
+>
+> 这个启动了只能本地可以用，做了一个nginx代理
+
+- nginx
