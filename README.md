@@ -15,3 +15,8 @@ gitlab_rails['gitlab_ssh_user'] = '222'
 ```
 
 - cloud9
+> 在线编辑IDE
+
+- gitignore.io
+> 快速生成 gitignore文件
+    

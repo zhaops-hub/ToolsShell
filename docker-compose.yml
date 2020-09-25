@@ -35,3 +35,10 @@ services:
     restart: always
     ports:
       - 8011:80
+      
+  gitignore-io:
+    image: gofunky/gitignore.io
+    container_name: gitignore-io
+    ports:
+      - 9001:8080
+    command: vapor run
