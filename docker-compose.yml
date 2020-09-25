@@ -51,3 +51,12 @@ services:
     volumes: 
       - /home/nginx/conf:/etc/nginx/conf.d
       - /home/nginx/logs:/var/log/nginx
+
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    ports:
+      - 9000:9000

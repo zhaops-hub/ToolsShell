@@ -23,3 +23,6 @@ gitlab_rails['gitlab_ssh_user'] = '222'
 > 这个启动了只能本地可以用，做了一个nginx代理
 
 - nginx
+- portainer
+
+> docker 监控工具
