@@ -60,3 +60,19 @@ services:
     restart: always
     ports:
       - 9000:9000
+  zookeeper:
+    container_name: zookeeper
+    image: wurstmeister/zookeeper
+    ports: 
+      - 2181:2181
+
+  kafka:     # docker-compose up -d --scale kafka=2        # 可以进行扩展或缩容   
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: 172.16.100.177          #本机ip
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
