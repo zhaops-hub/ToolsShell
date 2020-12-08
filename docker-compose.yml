@@ -92,12 +92,14 @@ services:
       - 27017:27017
     volumes: 
       - ./mongo_data:/data/db
-
+      
   consul:
     image: consul
     container_name: consul
     ports:
       - 8500:8500
     volumes:
+      - ./consul/data:/consul/data
+      - ./consul/config:/consul/config
       - /etc/localtime:/etc/localtime
     restart: always
