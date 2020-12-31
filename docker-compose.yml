@@ -51,6 +51,8 @@ services:
     volumes: 
       - /home/nginx/conf:/etc/nginx/conf.d
       - /home/nginx/logs:/var/log/nginx
+      - ./1_www.minglifuzhuang.cn_bundle.crt:/opt/1_www.minglifuzhuang.cn_bundle.crt
+      - ./2_www.minglifuzhuang.cn.key:/opt/2_www.minglifuzhuang.cn.key
 
   portainer:
     image: portainer/portainer
